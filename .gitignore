@@ -1,0 +1,5 @@
+
+# Ignorar carpetas y archivos específicos de NetBeans
+nbproject/
+build/
+dist/
