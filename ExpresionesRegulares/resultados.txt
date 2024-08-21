@@ -1,1 +1,3 @@
-1. Ingreso de números con decimales = No coincide
+1. Ingreso de números con decimales = 99.99
+2. Ingreso de letra con guiones y dígitos = a-123
+3. Ingreso de correo electrónico = Jacob@gmail.com

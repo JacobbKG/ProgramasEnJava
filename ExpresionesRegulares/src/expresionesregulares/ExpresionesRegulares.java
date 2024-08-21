@@ -24,7 +24,21 @@ public class ExpresionesRegulares {
             String regexDecimal = "\\d*[.,]\\d+";
             String resultado1 = evaluaRegex(regexDecimal,ingreso1);
             
+            System.out.print("Ingrese letra con guiones y digitos: ");
+            String ingreso2 = scanner.nextLine();
+            
+            String regexLetraGuion = "[a-zA-Z]-\\d{3}";
+            String resultado2 = evaluaRegex(regexLetraGuion,ingreso2);
+            
+            System.out.print("Ingrese correo electronico: ");
+            String ingreso3 = scanner.nextLine();
+            
+            String regexCorreo = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$";
+            String resultado3 = evaluaRegex(regexCorreo,ingreso3);
+            
             file.write("1. Ingreso de números con decimales = " + resultado1 + "\n");
+            file.write("2. Ingreso de letra con guiones y dígitos = " + resultado2 + "\n");
+            file.write("3. Ingreso de correo electrónico = " + resultado3 + "\n");
             System.out.println("Resultados guardados exitosamente.");
             
         }catch(IOException e){
