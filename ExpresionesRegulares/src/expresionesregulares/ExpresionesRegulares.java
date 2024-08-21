@@ -36,9 +36,23 @@ public class ExpresionesRegulares {
             String regexCorreo = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$";
             String resultado3 = evaluaRegex(regexCorreo,ingreso3);
             
+            System.out.print("Ingrese letras del abecedario en mayusculas y minusculas: ");
+            String ingreso4 = scanner.nextLine();
+            
+            String regexAbecedario = "^[a-zA-Z]+$";
+            String resultado4 = evaluaRegex(regexAbecedario,ingreso4);
+            
+            System.out.print("Ingrese numeros con letras y entre ellas tenga un @: ");
+            String ingreso5 = scanner.nextLine();
+            
+            String regexNumLetras = "^\\d+@[a-zA-Z]+$";
+            String resultado5 = evaluaRegex(regexNumLetras,ingreso5);
+            
             file.write("1. Ingreso de números con decimales = " + resultado1 + "\n");
             file.write("2. Ingreso de letra con guiones y dígitos = " + resultado2 + "\n");
             file.write("3. Ingreso de correo electrónico = " + resultado3 + "\n");
+            file.write("4. Ingreso de letras del abecedario en mayúsculas y minúsculas = " + resultado4 + "\n");
+            file.write("5. Ingreso de números con letras y entre ellas tenga un @ = " + resultado5 + "\n");
             System.out.println("Resultados guardados exitosamente.");
             
         }catch(IOException e){
